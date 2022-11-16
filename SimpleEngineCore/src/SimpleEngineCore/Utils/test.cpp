@@ -8,7 +8,7 @@ namespace SimpleEngine {
 
     int checkGLFW()
     {
-        std::cout << "Hello from Simple Engine Core" << std::endl;
+        std::cout << "Hello  Simple Engine Core" << std::endl;
 
 
 
