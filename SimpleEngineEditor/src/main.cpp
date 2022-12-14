@@ -1,12 +1,28 @@
 #include <iostream>
+#include <memory>
 
-#include <SimpleEngineCore/Utils/test.hpp>
+#include <SimpleEngineCore/Application.hpp>
+
+using namespace std;
+
+class MyApp : public SimpleEngine::Application
+{
+    virtual void on_update() override
+    {
+        cout << "Update frame: " << frame++ << endl;
+    }
+
+    int frame = 0;
+};
+
 
 int main()
 {
-    std::cout << "Hello from Simple Engine Editor" << std::endl;
+    auto myApp = make_unique<MyApp>();
 
-    SimpleEngine::checkGLFW();
+    int returnCode = myApp->start(1024, 768, "My first App");
 
-    std::cin.get();
+    cin.get();
+
+    return returnCode;
 }
