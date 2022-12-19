@@ -9,7 +9,7 @@ class MyApp : public SimpleEngine::Application
 {
     virtual void on_update() override
     {
-        cout << "Update frame: " << frame++ << endl;
+       // cout << "Update frame: " << frame++ << endl;
     }
 
     int frame = 0;
